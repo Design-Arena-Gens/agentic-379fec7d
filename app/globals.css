@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-950 text-slate-100 antialiased;
+}
+
+section {
+  @apply rounded-2xl bg-slate-900/80 backdrop-blur border border-slate-800 shadow-xl;
+}
+
+.gradient-card {
+  background: radial-gradient(circle at top, rgba(59, 130, 246, 0.25), transparent 60%),
+    radial-gradient(circle at bottom, rgba(14, 116, 144, 0.15), transparent 55%),
+    linear-gradient(135deg, rgba(30, 64, 175, 0.2), rgba(15, 118, 110, 0.1));
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.glow-ring {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
